@@ -46,6 +46,10 @@ export default class App extends LightningElement {
                 }
                 this.values = valuesnew;
             })
+            .catch((error) => {
+                console.log(error);
+                // handle Error
+            });
     }
     fetchSelectedValues() {
 

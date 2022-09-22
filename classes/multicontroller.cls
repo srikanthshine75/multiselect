@@ -12,7 +12,13 @@ public with sharing class multicontroller {
         List<Schema.PicklistEntry> ple = fieldResult.getPicklistValues();
       for( Schema.PicklistEntry pickListVal : ple){
             pickListValuesList.add(pickListVal.getLabel());
-        }
+            System.debug(pickListVal.getLabel() +' '+pickListVal.getValue());
+        } 
+//system.debug('pickListValuesList'+pickListValuesList);
+//List<String> l = new List<String>(fields.keySet()); 
+      //  Map<String,Schema.SObjectType> AllObjectMap=new Map<String,Schema.SObjectType>();
+      //  AllObjectMap=Schema.getGlobalDescribe();
+     //   List<String> l = new List<String>(AllObjectMap.keySet()); 
       return pickListValuesList;
     }
 }
